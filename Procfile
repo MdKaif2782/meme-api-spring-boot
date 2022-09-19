@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar build/libs/application.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/Random_meme_api-0.0.1-SNAPSHOT.jar
