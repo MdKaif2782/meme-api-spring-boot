@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.3'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 group = 'com.example'
@@ -24,8 +25,12 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 //build jar of the project
-jar {
-    baseName = 'spring-boot-soap'
-    version =  '0.0.1-SNAPSHOT'
-}
+task stage(dependsOn: ['build','shadowJar', 'clean', 'test'])
+build.mustRunAfter clean
+build.mustRunAfter test
 
+jar {
+    manifest{
+        attributes 'Class-Path': '/libs/application.jar', 'Main-Class': 'com.example.random_meme_api.RandomMemeApiApplication'
+    }
+}
