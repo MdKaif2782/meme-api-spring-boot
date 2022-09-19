@@ -10,11 +10,13 @@ public class ApiController {
     public String api() {
         return "Hello from API!";
     }
+
+    // get meme from specific subreddit
     @GetMapping("/api/meme")
-    public Post getMeme() {
+    public Post getMemeFromSubreddit(@RequestParam(value = "subreddit",defaultValue ="null") String subreddit) {
+        System.out.println("Request for meme from subreddit: " + subreddit);
         PostGrabber postGrabber = new PostGrabber();
-        return postGrabber.getPost();
+        return postGrabber.getPost(subreddit);
     }
-    //with query params
 
 }
