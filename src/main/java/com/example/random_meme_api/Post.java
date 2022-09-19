@@ -7,13 +7,13 @@ public class Post {
     private String author;
     private String permalink;
     private String postLink;
-    private String postTime;
-    private String Rating;
+    private Double postTime;
+    private Long score;
     private String postType;
     private Boolean over_18;
     private Boolean spoiler;
 
-    public Post(String title, String url, String subreddit, String author, String permalink, String postLink, String postTime, String rating, String postType, Boolean over_18, Boolean spoiler) {
+    public Post(String title, String url, String subreddit, String author, String permalink, String postLink, Double postTime, Long score, String postType, Boolean over_18, Boolean spoiler) {
         this.title = title;
         this.url = url;
         this.subreddit = subreddit;
@@ -21,7 +21,7 @@ public class Post {
         this.permalink = permalink;
         this.postLink = postLink;
         this.postTime = postTime;
-        this.Rating = rating;
+        this.score = score;
         this.postType = postType;
         this.over_18 = over_18;
         this.spoiler = spoiler;
@@ -82,12 +82,12 @@ public class Post {
         return permalink;
     }
 
-    public String getRating() {
-        return Rating;
+    public Long getScore() {
+        return score;
     }
 
-    public void setRating(String rating) {
-        Rating = rating;
+    public void setScore(Long score) {
+        this.score = score;
     }
 
     public void setPermalink(String permalink) {
@@ -102,7 +102,7 @@ public class Post {
         this.postLink = postLink;
     }
 
-    public String getPostTime() {
+    public Double getPostTime() {
         return postTime;
     }
 
@@ -114,7 +114,7 @@ public class Post {
         this.postType = postType;
     }
 
-    public void setPostTime(String postTime) {
+    public void setPostTime(Double postTime) {
         this.postTime = postTime;
     }
 }
