@@ -10,8 +10,7 @@ public class ApiController {
     public String api() {
         return "Hello from API!";
     }
-
-    // get meme from specific subreddit
+    //sort by top added
     @GetMapping("/api/meme")
     public Post getMemeFromSubreddit(@RequestParam(value = "subreddit",defaultValue ="null") String subreddit) {
         System.out.println("Request for meme from subreddit: " + subreddit);
