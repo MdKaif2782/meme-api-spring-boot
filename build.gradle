@@ -23,3 +23,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+//build jar of the project
+jar {
+    baseName = 'spring-boot-soap'
+    version =  '0.0.1-SNAPSHOT'
+}
+
