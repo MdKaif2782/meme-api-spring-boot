@@ -6,7 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ApiController {
-    @GetMapping("/api")
+
+    @GetMapping("/")
+    public String index() {
+        return "Hello motherfucker :)\nThis isn't he page for api calls,\ngo to https://random-meme-api-spring.herokuapp.com/api/meme " +
+                "for api calls\n" +
+                "You can also add a parameter to the url to get a meme from a specific subreddit\n"+"" +
+                "Example: https://random-meme-api-spring.herokuapp.com/api/meme?subreddit=memes";
+    }
     public String api() {
         return "Hello from API!";
     }
