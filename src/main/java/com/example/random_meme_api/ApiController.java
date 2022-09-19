@@ -9,4 +9,9 @@ public class ApiController {
     public String api() {
         return "Hello from API!";
     }
+    @GetMapping("/api/meme")
+    public Post meme() {
+        PostGrabber postGrabber = new PostGrabber();
+        return postGrabber.getPost();
+    }
 }

@@ -10,8 +10,10 @@ public class Post {
     private String postTime;
     private String Rating;
     private String postType;
+    private Boolean over_18;
+    private Boolean spoiler;
 
-    public Post(String title, String url, String subreddit, String author, String permalink, String postLink, String postTime, String rating, String postType) {
+    public Post(String title, String url, String subreddit, String author, String permalink, String postLink, String postTime, String rating, String postType, Boolean over_18, Boolean spoiler) {
         this.title = title;
         this.url = url;
         this.subreddit = subreddit;
@@ -21,6 +23,8 @@ public class Post {
         this.postTime = postTime;
         this.Rating = rating;
         this.postType = postType;
+        this.over_18 = over_18;
+        this.spoiler = spoiler;
     }
 
     public Post() {
@@ -40,6 +44,22 @@ public class Post {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Boolean getOver_18() {
+        return over_18;
+    }
+
+    public void setOver_18(Boolean over_18) {
+        this.over_18 = over_18;
+    }
+
+    public Boolean getSpoiler() {
+        return spoiler;
+    }
+
+    public void setSpoiler(Boolean spoiler) {
+        this.spoiler = spoiler;
     }
 
     public String getSubreddit() {
