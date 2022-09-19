@@ -77,8 +77,9 @@ public class PostGrabber {
             connection = new URL(url).openConnection();
             connection.setRequestProperty("User-Agent", "Mozilla/5.0");
             connection.connect();
-            //parse the json
-            JSONParser parser = new JSONParser(connection.getInputStream());
+            String input = connection.getInputStream().toString();
+            System.out.println(input);
+            JSONParser parser = new JSONParser(input);
             JSONArray json = (JSONArray) parser.parse();
             JSONObject data = (JSONObject) json.get(0);
             JSONObject data2 = (JSONObject) data.get("data");
