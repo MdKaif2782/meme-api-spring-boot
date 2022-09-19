@@ -17,12 +17,9 @@ public class PostGrabber {
             "dankmemes",
             "memes",
             "dankvideos",
-            "wholesomememes",
-            "wholesomevideos",
             "animemes",
             "goodanimemes",
-            "cursedmemes",
-            "okbuddyretard",
+            "cursedmemes"
 
     };
     String subredditName = subreddit[new Random().nextInt(subreddit.length)];

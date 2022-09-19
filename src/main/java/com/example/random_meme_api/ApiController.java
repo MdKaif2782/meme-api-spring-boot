@@ -11,14 +11,10 @@ public class ApiController {
         return "Hello from API!";
     }
     @GetMapping("/api/meme")
-    public Post meme() {
+    public Post getMeme() {
         PostGrabber postGrabber = new PostGrabber();
         return postGrabber.getPost();
     }
     //with query params
-    @GetMapping("/api/meme")
-    public Post meme(@RequestParam String subreddit) {
-        PostGrabber postGrabber = new PostGrabber();
-        return postGrabber.getPost(subreddit);
-    }
+
 }
