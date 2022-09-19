@@ -24,7 +24,7 @@ public class PostGrabber {
 
     };
     String subredditName = subreddit[new Random().nextInt(subreddit.length)];
-    String url = "https://www.reddit.com/r" + subredditName + "/random/.json";
+    String url = "https://www.reddit.com/r/" + subredditName + "/random/.json";
     String title;
     String ContentUrl;
     String subreddit_of_post;
