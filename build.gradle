@@ -31,7 +31,7 @@ build.mustRunAfter clean
 build.mustRunAfter test
 
 //build jar of the project
-jar{
-    baseName(project.name)
-    version = project.version
+jar {
+    baseName = 'meme-api'
+    version = '0.0.1-SNAPSHOT'
 }
