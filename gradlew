@@ -28,7 +28,7 @@
 #       command line, like:
 #
 #           ksh Gradle
-#
+#ko
 #       Busybox and similar reduced shells will NOT work, because this script
 #       requires all of these POSIX shell features:
 #         * functions;
