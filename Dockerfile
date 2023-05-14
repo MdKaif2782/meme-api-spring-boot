@@ -2,6 +2,6 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
 
-COPY build/libs/meme-api-0.0.1-SNAPSHOT-plain.jar app.jar
+COPY build/libs/Random_meme_api-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
